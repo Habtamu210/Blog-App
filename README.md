@@ -52,6 +52,12 @@
 
 - Users will be able to comment on blog posts.
 
+-  Create models
+
+-  Create model classes for all entities
+
+-  Set up associations between models
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,7 +121,8 @@ Run Project with:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
--  Create models
+
+- Validations and model specs.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
