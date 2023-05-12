@@ -14,7 +14,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -52,10 +51,6 @@
 -  Users will be able to delete their own blog posts.
 
 - Users will be able to comment on blog posts.
-
-
-## 🚀 live-demo <a name="live-demo"></a>
- Coming soon
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
