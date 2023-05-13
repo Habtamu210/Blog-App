@@ -58,6 +58,8 @@
 
 -  Set up associations between models
 
+-  Validations and model specs
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -122,7 +124,7 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Validations and model specs.
+-Controller and View specs.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
