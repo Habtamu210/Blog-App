@@ -50,7 +50,7 @@
 
 -  Users will be able to delete their own blog posts.
 
-- Users will be able to comment on blog posts.
+-  Users will be able to comment on blog posts.
 
 -  Create models
 
@@ -59,6 +59,8 @@
 -  Set up associations between models
 
 -  Validations and model specs
+
+-  Create controllers and views for the Blog app
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -124,7 +126,7 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--Controller and View specs.
+- Controller and View specs.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
