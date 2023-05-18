@@ -73,5 +73,4 @@ group :test do
 end
 
 gem 'rails-controller-testing'
-gem 'jbuilder'
 gem 'rubocop', '>= 1.0', '< 2.0'
