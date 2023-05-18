@@ -62,6 +62,8 @@
 
 -  Create controllers and views for the Blog app
 
+-  Create specs for Controller
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +128,7 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Controller and View specs.
+- Create Views
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
