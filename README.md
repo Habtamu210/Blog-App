@@ -66,6 +66,8 @@
 
 -  Create Application Views 
 
+- Add forms
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,7 +132,7 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Create application forms
+- Create integartion specs
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
