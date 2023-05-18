@@ -64,6 +64,8 @@
 
 -  Create specs for Controller
 
+-  Create Application Views 
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,7 +130,7 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Create Views
+- Create application forms
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
