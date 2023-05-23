@@ -1,36 +1,41 @@
-<% content_for :title, "#{@user.name} | #{@post.title}" %>
-<h1>Posts#show</h1>
-<% if flash[:success] %>
-  <div class="notice"><%= flash[:success] %></div>
-<% end %>
+<div class="post-detail-wrapper">
+  <h1 class="header-text"> This shows the details of a post with id = <%= @post.id %>
+  and written by an author with id = <%= @post.author.id%>
+  </h1>
 
-<section class="post-comments">
-  <section class="post">
-    <%= render "user_post", post: @post %>
-  </section>
-  <div class="user-post-comments">
-    <% @comments.each do |comment| %>
-      <div class="post-comment">
-        <p>
-          <span><strong><%= comment.author.name %>:</strong></span>
-          <span><%= comment.text %></span>
-        </p>
-        <% if can? :destroy, comment %>
-        <%= button_to "Delete Comment", user_post_comment_path(@user, @post, comment), method: :delete, class: "button-link" %>
-      <% end %>
-      </div>
+  <div class="post-comment-container">
+   <div class="post-info-text">
+    <div class="post-header">
+      <p class="post-title"> <%= @post.title %> by <%= @post.author.name%> </p>
+      <p class="comments-likes-count">
+        Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
+      </p>
+    </div>
+
+    <div class="post-text-wrapper">
+      <p class="post-text"> <%= @post.text%> </p>
+    </div>
+   </div>
+
+   <%= render "shared/like" %>
+
+   <ul class="comment-list">
+    <% @post.comments.each do |comment| %>
+      <li class="comment-item">
+       <%= comment.author.name  %>: <%= comment.text %>
+      </li>
     <% end %>
-  <div>
-</section>
+   </ul>
 
-<div class="user-interaction">
-<%= button_tag '', class: 'main-button' do%>
-  <%= link_to 'Add Comment', new_user_post_comment_path(@user.id, @post.id), class: "button-link" %>
-<% end %>
+   <div class="btn-group">
+     <button class="btn btn-create-comment">
+        <%= link_to "Comment here", comment_new_path %>
+     </button>
 
-<%= render "likes/add_like"%>
+    <button class="btn btn-all-comments">
+      <%= link_to 'See all comments', uncompleted_path %>
+    </button>
+   </div>
 
-<% if can? :destroy, @post %>
-  <%= button_to "Delete Post", user_post_path, method: :delete, class: "main-button"%>
-<% end %>
+  </div>
 </div>
