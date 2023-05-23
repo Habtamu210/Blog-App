@@ -68,6 +68,8 @@
 
 - Add forms
 
+- Create integartion specs
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,13 +128,20 @@ Run Project with:
 - Twitter: [@beleyaha](https://twitter.com/beleyaha)
 - LinkedIn: [@habtamu-](https://www.linkedin.com/in/habtamu-birru/)
 
+
+👤 **Shaaibu Suleiman**
+- GitHub: [@githubhandle](https://github.com/shaaibu7)
+- Twitter: [@twitterhandle](https://twitter.com/SuleimanShaaibu?t=EAqVJrP59poEb2W46kK9vg&s=09)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/shaaibu-suleiman-119271206)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Create integartion specs
+- Blog app- add devise
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
