@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe 'users#index route Page testing', type: :feature do
   before(:each) do
     @user = User.create(name: 'Habtamu orig 2', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                        bio: 'Microvers estudent', posts_counter: 20)
+                        bio: 'Microvers estudent', posts_count: 20)
     @user2 = User.create(name: 'Hanna', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                         bio: 'Microvers estudent sec batch', posts_counter: 56)
+                         bio: 'Microvers estudent sec batch', posts_count: 56)
   end
 
   describe "\nusers#index testing group" do
@@ -27,7 +27,7 @@ RSpec.describe 'users#index route Page testing', type: :feature do
 
     it 'should display the number of posts of each user' do
       User.all.each do |user|
-        expect(page).to have_content("Number of posts: #{user.posts_counter}")
+        expect(page).to have_content("Number of posts: #{user.posts_count}")
       end
     end
 
