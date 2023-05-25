@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:user) { User.create!(name: 'John', posts_counter: 0) }
+  let(:user) { User.create!(name: 'John', posts_count: 0) }
   let(:post) do
     Post.create!(title: 'Post title', text: 'Post text', author: user, comments_counter: 0, likes_counter: 0)
   end

@@ -1,31 +1,27 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @post = Post.where(author_id: params[:user_id])
-
-    render '/posts/index'
+    @pagy, @posts = pagy(@user.posts.includes(:comments))
   end
 
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
+    @comments = @post.comments.includes(:author)
   end
 
   def new
-    @post = Post.new
+    @new_post = Post.new
   end
 
   def create
-    @current_user = current_user
-    @post = Post.new(post_params)
-    @post.author = @current_user
-    @post.comments_counter = 0
-    @post.likes_counter = 0
-    if @post.save
-      flash.now[:notice] = 'Successfully posted'
-      redirect_to user_path(@current_user)
+    post = Post.new(author: current_user, **post_params)
+
+    if post.save
+      flash[:success] = 'Post saved successfully'
+      redirect_to user_posts_url
     else
-      flash.now[:error] = 'Error in posting'
+      flash.now[:error] = 'Error: Post could not be saved'
       render :new
     end
   end

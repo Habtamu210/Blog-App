@@ -1,15 +1,12 @@
-<h1 class="form-header form-header-comment-new"> Create new comment </h1>
+<%= render "posts/user_post", post: @post %>
 
-<%= form_with url: comment_create_path, model: @comment do |form| %>
-  <%= form.hidden_field :post_id, value: @post.id %>
-  <div class="form-wrapper">
-
-    <div class="fields-wrapper">
-      <%= form.label :text%>
-      <%= form.text_area :text%>
+<h2 class="m-3">New Comment</h2>
+<%= form_with model: @comment, url: user_post_comments_path, class: "frm" do  |form| %>
+    <div class="wrapper"
+  <div class="input-group">
+    <label class="form-label">Comment here</label>
+    <%= form.text_area :text, class: "form-control", rows: "7" %>
   </div>
-
-  <%= form.submit 'Comment now', :class=>"btn btn-comment" %>
-
+  <%= form.button "Add Comment", type: "submit", class: "main-button" %>
   </div>
 <% end %>
