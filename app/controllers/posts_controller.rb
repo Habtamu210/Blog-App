@@ -2,14 +2,13 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @post = Post.where(author_id: params[:user_id])
-   
+
     render '/posts/index'
   end
 
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
-   
   end
 
   def new
