@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.create!(name: 'John', posts_count: 2) }
+  let(:user) { User.create!(name: 'John', posts_count: 0) }
   let(:post) do
     Post.create!(title: 'Post title', text: 'Post text', author: user, comments_counter: 0, likes_counter: 0)
   end
@@ -23,10 +23,10 @@ RSpec.describe User, type: :model do
   end
 
   it 'should have a posts_counter' do
-    expect(user.posts_count).to eq(2)
+    expect(user.posts_count).to eq(0)
   end
 
   it 'should have a recent_three_posts' do
-    expect(user.recent_posts).to eq([post])
+    expect(user.recent_three).to eq([post])
   end
 end

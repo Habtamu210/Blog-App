@@ -35,7 +35,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'should have a recent_five_comments' do
-    expect(post.recent_comments).to eq([])
+    expect(post.recent_five).to eq([])
   end
 
   it 'should have a valid title' do
