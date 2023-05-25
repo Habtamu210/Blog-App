@@ -1,9 +1,6 @@
 class CommentsController < ApplicationController
   def new
     @comment = Comment.new
-    # @current_user = current_user
-    # @comment.author = @current_user
-    # @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
   end
 
