@@ -143,7 +143,11 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add devise
+ - ADD verfied badge
+ 
+ - Allow users to upload images
+ 
+ - Allow users to share others user posts
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
