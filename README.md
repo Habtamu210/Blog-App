@@ -143,7 +143,11 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add authorization rules
+- Add feature to let user add, edit and delete posts
+
+- Add login feature so that user with valid credentials can post
+
+- Add admin feature to the appnew_feature_2
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
