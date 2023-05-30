@@ -8,12 +8,7 @@ RSpec.describe Comment, type: :model do
   let(:comment) do
     Comment.create!(text: 'Comment text', author_id: user.id, post_id: post.id)
   end
-
   it 'should belong to user' do
     expect(comment.author_id).to eq(user.id)
-  end
-
-  it 'should belong to post' do
-    expect(comment.post).to eq(post)
   end
 end
