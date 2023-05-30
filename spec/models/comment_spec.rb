@@ -11,4 +11,8 @@ RSpec.describe Comment, type: :model do
   it 'should belong to user' do
     expect(comment.author_id).to eq(user.id)
   end
+
+  it 'should belong to post' do
+    expect(comment.post).to eq(post)
+  end
 end
