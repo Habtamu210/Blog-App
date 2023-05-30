@@ -70,6 +70,8 @@
 
 - Create integartion specs
 
+- Blog app- add devise
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +145,6 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- add devise
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
