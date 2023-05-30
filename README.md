@@ -70,8 +70,6 @@
 
 - Create integartion specs
 
-- Blog app- add devise
-
 - Create integartion specs
 
 
