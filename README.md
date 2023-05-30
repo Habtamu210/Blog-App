@@ -72,6 +72,8 @@
 
 - Blog app- add devise
 
+- Add authorization-rules
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +145,7 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add authorization rules
+- Add endpoints
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
