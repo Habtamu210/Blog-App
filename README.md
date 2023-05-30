@@ -131,11 +131,11 @@ Run Project with:
 - LinkedIn: [@habtamu-](https://www.linkedin.com/in/habtamu-birru/)
 
 
-👤 **Shaaibu Suleiman**
-- GitHub: [@githubhandle](https://github.com/shaaibu7)
-- Twitter: [@twitterhandle](https://twitter.com/SuleimanShaaibu?t=EAqVJrP59poEb2W46kK9vg&s=09)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/shaaibu-suleiman-119271206)
+👤 **Wullah Jonas Nuta**
 
+- GitHub: [@jonas-45](https://github.com/jonas-45)
+- Twitter: [@jonaswullah](https://twitter.com/jonaswullah)
+- LinkedIn: [jonas-wullah](https://linkedin.com/in/jonas-wullah)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
