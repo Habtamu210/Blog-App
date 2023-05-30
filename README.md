@@ -125,7 +125,7 @@ Run Project with:
 👤 **Habtamu**
 
 - GitHub: [@Habtamu210](https://github.com/Habtamu210)
-
+- Twitter: [@beleyaha](https://twitter.com/beleyaha)
 - LinkedIn: [@habtamu-](https://www.linkedin.com/in/habtamu-birru/)
 
 
