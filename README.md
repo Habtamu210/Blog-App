@@ -70,6 +70,8 @@
 
 - Create integartion specs
 
+- Blog app- add devise
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,8 +136,6 @@ Run Project with:
 - GitHub: [@jonas-45](https://github.com/jonas-45)
 - Twitter: [@jonaswullah](https://twitter.com/jonaswullah)
 - LinkedIn: [jonas-wullah](https://linkedin.com/in/jonas-wullah)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,11 +143,11 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
- - ADD verfied badge
- 
- - Allow users to upload images
- 
- - Allow users to share others user posts
+- Add feature to let user add, edit and delete posts
+
+- Add login feature so that user with valid credentials can post
+
+- Add admin feature to the appnew_feature_2
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
