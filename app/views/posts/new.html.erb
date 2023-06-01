@@ -1,20 +1,20 @@
-<% content_for :title, "New Post" %>
-<%= render 'users/user_info' %>
-<h1>Post#new</h1>
-
-<h1 class="text-xl mt-8">New Post</h1>
-<%= form_with model: @new_post, url: user_posts_path, class: "frm" do |form|  %>
-  <div class="input-group">
-    <label class="form-label">Post title</label>
-    <%= form.text_field :title, class: "form-control" %>
-  </div>
-
-  <div class="input-group">
-    <label class="form-label">Post text</label>
-    <%= form.text_area :text, class: "form-control", rows: "7" %>
-  </div>
-
-  <div>
-    <%= form.button "Create Post", type: "submit", class: "main-button" %>
-  </div>
-<% end %>
+<div class="container mt-5 ">
+  <h2>Create a post</h2>
+  <%= form_for([@user, @post]) do |form| %>
+    <div class="row mb-3">
+      <%= form.label :post_title, for: "title", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <%= form.label :content, for: "text", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_area :text, class: "form-control" %>
+      </div>
+    </div>
+    <div>
+      <%= form.submit "Create post", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

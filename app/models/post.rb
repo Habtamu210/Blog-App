@@ -1,23 +1,21 @@
 class Post < ApplicationRecord
-  after_save :update_posts_counter
-  after_destroy :update_posts_counter
+  belongs_to :author, class_name: 'User', counter_cache: :posts_count
+  has_many :comments, class_name: 'Comment', dependent: :destroy
+  has_many :likes, class_name: 'Like'
 
-  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
-  has_many :comments, dependent: :destroy
-  has_many :likes, dependent: :destroy
+  validates :title, presence: true, length: { maximum: 250 }
+  validates :comments_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
+  validates :likes_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
 
-  # validation
-  validates :title, presence: true, length: { in: 1..250 }
-  validates :comments_counter, :likes_counter, comparison: { greater_than_or_equal_to: 0 },
-                                               numericality: { only_integer: true }
-
-  def recent_five
-    comments.includes(:author).order(created_at: :desc).limit(5)
+  def five_recent_comments
+    comments.last(5)
   end
+
+  before_destroy :delete_comments
 
   private
 
-  def update_posts_counter
-    author.update(posts_count: author.posts.all.length)
+  def delete_comments
+    comments.delete_all
   end
 end

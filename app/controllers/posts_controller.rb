@@ -1,29 +1,51 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+  before_action :find_post, only: [:destroy]
+
+  def find_post
+    @post = Post.find(params[:id])
+  end
+
   def index
-    @user = User.find(params[:user_id])
-    @pagy, @posts = pagy(@user.posts)
+    @user = User.includes(:posts).find(params[:user_id])
+    @posts = @user.posts.includes(:comments)
+    authorize! :read, Post
   end
 
   def show
-    @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
-    @comments = @post.comments.includes(:author)
+    @user = current_user
+    @comment = Comment.new
+    @like = Like.new
+    render 'posts/detail_post'
   end
 
   def new
-    @new_post = Post.new
+    @user = current_user
+    @post = @user.posts.build
   end
 
   def create
-    post = Post.new(author: current_user, **post_params)
-
-    if post.save
-      flash[:success] = 'Post saved successfully'
-      redirect_to user_posts_url
+    @user = current_user
+    post = {
+      title: post_params[:title],
+      text: post_params[:text],
+      comments_counter: 0,
+      likes_counter: 0
+    }
+    @post = Post.new(post)
+    @post.author = @user
+    if @post.save
+      redirect_to user_post_path(@user, @post), notice: 'Post created successfully.'
     else
-      flash.now[:error] = 'Error: Post could not be saved'
       render :new
     end
+  end
+
+  def destroy
+    @post.destroy
+
+    redirect_to user_posts_path
   end
 
   private
