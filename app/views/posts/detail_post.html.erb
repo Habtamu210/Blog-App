@@ -1,0 +1,28 @@
+<div class="post-detail">
+  <section class="post-ct">
+    <div class="post-header">
+      <h4>
+        <%= "#{@post.title} by #{@post.author.name}" %>
+      </h4>
+      <span>
+        Comments: <%= @post.comments_counter %>, Likes: <%=  @post.likes_counter %>
+      </span>
+    </div>
+    <%= @post.text %>
+  </section>
+  <%= render partial: 'likes/like', locals: { user: @user, post: @post, like: @like } %>
+  <section class="comments mt-3">
+    <div class="flex">
+      <% if @post.comments.empty? %>
+        <%= "There are no comments in this post" %>
+      <% else %>
+        <% @post.comments.each do |comment| %>
+          <div class="mt-2">
+            <%= "#{comment.user.name} : #{comment.text}" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </section>
+  <%= render partial: 'comments/form', locals: { user: @user, post: @post, comment: @comment } %>
+</div>

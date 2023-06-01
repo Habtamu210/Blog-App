@@ -1,19 +1,33 @@
 class CommentsController < ApplicationController
+  before_action :find_comment, only: [:destroy]
+
+  def find_comment
+    @comment = Comment.find(params[:id])
+  end
+
   def new
+    @user = current_user
+    @post = Post.find(params[:id])
     @comment = Comment.new
-    @post = Post.find(params[:post_id])
   end
 
   def create
-    post = Post.find(params[:post_id])
-    comment = Comment.create(author: current_user, post:, **comment_params)
-
-    if comment.save
-      flash[:success] = 'Comment was successfully saved !'
+    @user = current_user
+    @post = Post.find(params[:post_id])
+    @comment = Comment.new(comment_params)
+    @comment.user = @user
+    @comment.post = @post
+    if @comment.save
+      redirect_to user_post_path(@user, @post)
     else
-      flash.now[:error] = 'Error: Comment could not be saved'
+      render :new
     end
-    redirect_to user_post_url(current_user.id, post.id)
+  end
+
+  def destroy
+    @comment.destroy
+
+    redirect_to user_post_path
   end
 
   private
