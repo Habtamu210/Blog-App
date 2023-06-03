@@ -74,6 +74,8 @@
 
 - Add authorization rules
 
+- Add API endpoints
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,11 +147,11 @@ Run Project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- The app allows user to post blog
-
-- User can like a post and see how many likes each has got
-
-- User write on a post
+ - Add feature to let user add, edit and delete posts
+ 
+ - Add login feature so that user with valid credentials can post
+ 
+ - Add admin feature to the appnew_feature
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
